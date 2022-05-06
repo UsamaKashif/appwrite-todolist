@@ -17,6 +17,7 @@ const SignIn = () => {
             localStorage.setItem("sessionid", res.$id)
             router.push('/todos')
         }).catch(err => {
+            console.log(err)
             setMessage(err.message)
         })
         reset({
